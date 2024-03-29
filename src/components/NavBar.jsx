@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-const NavBar = ({ pokemonIndex, setPokemon, pokemonList }) => {
+const NavBar = ({ setPokemon, pokemonList }) => {
   return (
     <div>
-      {pokemonIndex > 0 && (
-        <button onClick={() => setPokemon(pokemonIndex - 1)}>Précedent</button>
-      )}
-
-      {pokemonIndex < pokemonList.length - 1 && (
-        <button onClick={() => setPokemon(pokemonIndex + 1)}>Suivant</button>
-      )}
+      {pokemonList.map((pokemon, index) => {
+        return (
+          <button onClick={() => setPokemon(index)} key={index}>
+            {pokemon.name}
+          </button>
+        );
+      })}
     </div>
   );
 };
