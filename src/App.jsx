@@ -1,6 +1,6 @@
 import NavBar from './components/NavBar';
 import PokemonCard from './components/PokemonCard';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const pokemonList = [
   {
@@ -31,6 +31,14 @@ const pokemonList = [
 // const pokemon = pokemonList[1];
 function App() {
   const [pokemonIndex, setPokemon] = useState(0);
+
+  useEffect(() => {
+    alert('hello pokemon trainer :)');
+  }, []);
+
+  if (pokemonList[pokemonIndex].name === 'pikachu') {
+    alert('pika pikachu !!!');
+  }
 
   return (
     <div>
