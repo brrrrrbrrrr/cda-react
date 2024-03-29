@@ -10,7 +10,7 @@ const pokemonList = [
     name: 'mew',
   },
 ];
-const pokemon = pokemonList[0];
+const pokemon = pokemonList[1];
 function App() {
   return (
     <div>
